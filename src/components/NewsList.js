@@ -3,11 +3,9 @@ import SearchBar from "./SearchBar";
 
 const NewsList = () => {
 
-
     return (
         <article>
             <SearchBar />
-
         </article>
     );
 }
