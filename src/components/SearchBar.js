@@ -8,7 +8,6 @@ const SearchBar = () => {
     const [search, setSearch] = useState(false)
     const [language, setLanguage] = useState([]);
 
-
     useEffect(() => {
         if (input) {
             fetch(`https://newsapi.org/v2/everything?q=${input}&language=${language}&apiKey=712ef00549134bfc8376f20f42b38676`
@@ -27,7 +26,6 @@ const SearchBar = () => {
                     <div>
                         <input type="text" placeholder="Type to search..." value={input} className="input_field" onChange={(event) => setInput(event.target.value)} />
                         <input type="button" value="Search" onClick={() => setSearch(!search)} className="searchbar" />
-
                         <select name="languages" className="languages" onChange={(event) => setLanguage(event.target.value)}>
                             <option value="">Select your language</option>
                             <option value="de">German</option>
@@ -50,11 +48,8 @@ const SearchBar = () => {
                     />
                 )
             })}
-
         </section >
-
     );
-
 }
 
 export default SearchBar;
